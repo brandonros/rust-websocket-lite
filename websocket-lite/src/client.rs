@@ -59,9 +59,9 @@ fn build_request(url: &Url, key: &str, headers: &[(String, String)]) -> String {
 
     if let Some(host) = url.host() {
         writeok!(s, "Host: {host}", host = host);
-        if let Some(port) = url.port_or_known_default() {
+        /*if let Some(port) = url.port_or_known_default() {
             writeok!(s, ":{port}", port = port);
-        }
+        }*/
 
         s += "\r\n";
     }
